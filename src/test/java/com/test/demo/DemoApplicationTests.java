@@ -1,6 +1,4 @@
 package com.test.demo;
-
-
 import com.test.demo.service.TestPetService;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
@@ -15,17 +13,13 @@ class DemoApplicationTests {
 		
 	   @Autowired
 	    private TestPetService service;
-
-		@Test	
+		@Test
 		public void checkCount() {
-
 			PetResponseDTO response = this.service.getMyPetCountByStatus("available","doggie");
-
-			System.out.println("hello here is the count  => "+response.petCount);
-
-			if(response.petCount<0) {
+			System.out.println("\n The number of available doggies are : "+response.petCount);
+			if(response.petCount<=0) {
 				 Assert.fail(response.errorMessage);
-				 System.out.println("hello here is the count --> "+response.petCount);
+				 System.out.println("There are no available doggies");
 			 }
 		}
 }
