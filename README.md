@@ -6,5 +6,5 @@ Java version : 1.8
 
 Just need to run the Junit DemoApplicationTests and the expected output is to return the number of available doggie
 
-e,g The number of available doggies are : 150
+e,g. The number of available doggies are : 150
 
